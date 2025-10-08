@@ -1,3 +1,55 @@
+-- 🔒 CHẶN NGƯỜI CHƠI KHÔNG ĐƯỢC DÙNG SCRIPT (VÀ KICK RA KHỎI GAME)
+local blockedPlayers = {
+	["xmzioh"] = true,  -- thay bằng tên người chơi bị cấm
+	["PlayerHacker"] = true,
+	["Troller123"] = true
+}
+
+local player = game.Players.LocalPlayer
+
+if blockedPlayers[player.Name] then
+	-- Giao diện thông báo
+	local banGui = Instance.new("ScreenGui")
+	local frame = Instance.new("Frame")
+	local title = Instance.new("TextLabel")
+	local text = Instance.new("TextLabel")
+	local button = Instance.new("TextButton")
+
+	banGui.Name = "BanNotice"
+	banGui.Parent = player:WaitForChild("PlayerGui")
+
+	frame.Parent = banGui
+	frame.Size = UDim2.new(0, 460, 0, 220)
+	frame.Position = UDim2.new(0.5, -230, 0.5, -110)
+	frame.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+	frame.BorderSizePixel = 0
+	frame.Active = true
+
+	title.Parent = frame
+	title.Size = UDim2.new(1, 0, 0, 40)
+	title.BackgroundTransparency = 1
+	title.Font = Enum.Font.GothamBold
+	title.Text = "Lỗi Khi Sử Dụng Script"
+	title.TextColor3 = Color3.fromRGB(255, 255, 255)
+	title.TextScaled = true
+
+	text.Parent = frame
+	text.Size = UDim2.new(1, -20, 1, -80)
+	text.Position = UDim2.new(0, 10, 0, 45)
+	text.BackgroundTransparency = 1
+	text.Font = Enum.Font.Gotham
+	text.TextColor3 = Color3.fromRGB(220, 220, 220)
+	text.TextWrapped = true
+	text.TextScaled = true
+	text.Text = "Tài khoản này đã bị cấm sử dụng script này.\n\n" ..
+		"Nếu bạn cho rằng đây là nhầm lẫn, hãy liên hệ ADMIN để được xem xét.\n\n(Mã Lỗi: 403)"
+
+	button.Parent = frame
+	button.Size = UDim2.new(0, 15
+
+
+
+
 local main = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local up = Instance.new("TextButton")
