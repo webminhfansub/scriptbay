@@ -1,6 +1,6 @@
 -- 🔒 CHẶN NGƯỜI CHƠI KHÔNG ĐƯỢC DÙNG SCRIPT (VÀ KICK RA KHỎI GAME)
 local blockedPlayers = {
-	["candyx2747"] = true,  -- 🔹 thay bằng tên người chơi bị cấm
+	["modi"] = true,  -- 🔹 thay bằng tên người chơi bị cấm
 	["Quanghuy_2511"] = true,
 	["Troller123"] = true
 }
